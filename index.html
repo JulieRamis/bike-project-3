@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vloc</title>
+  <meta name="description" content="Location de vélos à Toulouse">
+  <meta name="keywords" content="V'loc, Location de vélos à Toulouse">
+  <meta name="author" content="Julie Ramis">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+
+
+</head>
+
+<body>
+
+  <header>
+    <img src="img/logo.png" alt="logo" />
+    <h1>Location de vélos à Toulouse</h1>
+  </header>
+
+
+  <section class="container-fluid" id="slider">
+    <div class="container" id="content-slider">
+      <img class="col-12" id="img" src="img/1.png" />
+      <p class="col-12" id="text-slider">"Sélectionnez une station."</p>
+      <p id="nb">0</p>
+    </div>
+
+
+
+    <div class="button-slider" class="container">
+      <i id="left" class="fa fa-angle-double-left"></i>
+      <i id="pause" class="fa fa-pause-circle"></i>
+      <i id="play" class="fa fa-play-circle"></i>
+      <i id="right" class="fa fa-angle-double-right"></i>
+    </div>
+  </section>
+
+  <section id="confirmation">
+    <p id="text-confirm">Pas de réservation en cours.</p>
+    <p id="text-timer"></p>
+  </section>
+  <section id="map" class="container-fluid">
+    <div class="row">
+      <div id="mapid" class="order-2 col-sm-12 col-lg order-lg-1"></div>
+      <div id="frame" class="order-1 col-sm-12 col-lg-5 order-lg-2">
+
+        <table class="container">
+          <caption>Détails de la station</caption>
+          <tr>
+            <th>Station : </th>
+            <td id="station-name"></td>
+          </tr>
+          <tr>
+            <th>Adresse : </th>
+            <td id="station-address"></td>
+          </tr>
+          <tr>
+          <tr>
+            <th>Places : </th>
+            <td id="bike-stands"></td>
+          </tr>
+          <tr>
+            <th>Vélos disponibles : </th>
+            <td id="available-bike"></td>
+          </tr>
+          <tr>
+            <th>Statut : </th>
+            <td id="statut"></td>
+          </tr>
+        </table>
+       
+        <form action="" id="form" onsubmit="return false" class="container">
+            
+           <div> 
+             <label for="nom">Nom : </label>
+            <input type="text" name="nom" id="nom" required />
+            </div>
+            <div> 
+            <label for="prenom">Prénom :</label>
+            <input type="text" name="prenom" id="prenom" required />
+            </div> 
+          <button type="submit" id="bouton-resa">Réserver</button>
+          
+
+        </form>
+
+        <div id="canvas-zone">
+          <canvas id="canvas"></canvas>
+            <div><button id="bouton-canvas" type="submit">Effacer</button></div>
+            <div><button id="bouton-valid" type="submit" disabled>Valider</button></div>
+          
+        </div>
+  </section>
+
+
+  <script src="js/slider.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/reservation.js"></script>
+  <script src="js/canvas.js"></script>
+</body>
+
+</html>

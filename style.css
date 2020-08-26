@@ -1,0 +1,169 @@
+* {
+    font-family: 'Abel', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header img {
+    width: 120px;
+    margin-top: 10px;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+#slider {
+    background-color: #228e63;
+}
+
+#content-slider {
+    margin-bottom: -40px;
+}
+
+#img {
+    height: 582px;
+    margin-top: 20px;
+    border: black 1px solid;
+    border-radius: 10px;
+    padding: 0;
+}
+
+#text-slider {
+    top: -39px;
+    text-align: center;
+    color: white;
+    background-color: rgba(37, 37, 37, 0.7);
+    border: black 1px solid;
+    border-radius: 0 0 10px 10px;
+    font-size: 1.5em;
+}
+
+.button-slider {
+    padding-top: -50px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-slider i {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    box-shadow: 5px 1px 5px black;
+    margin-bottom: 10px;
+}
+
+#right {
+    border-radius: 0 20px 20px 0;
+}
+
+#left {
+    border-radius: 20px 0 0 20px;
+}
+
+#play {
+    display: none;
+}
+
+#nb {
+    display: none;
+}
+
+#mapid {
+    height: 700px;
+    margin: 50px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+#frame {
+    background-color: #228e63;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-right: 20px;
+    height: 600px;
+    display: none;
+}
+
+caption {
+    caption-side: top;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+
+#canvas-zone {
+    display: none;
+    text-align: center;
+}
+
+canvas {
+    background-color: white;
+    border: black solid 1px;
+    border-radius: 10px;
+}
+
+
+th {
+    text-align: right;
+}
+
+#confirmation{
+    text-align: center;
+    background-color: #228e63;
+    color: black;
+    border: black solid 3px;
+    border-radius: 10px;
+    margin-top: 20px;
+
+}
+#text-confirm, form, canvas{
+    margin-top: 20px;
+}
+
+form{
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1023px) {
+    #mapid {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    #frame {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #img {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #text-slider {
+        font-size: 1.2em;
+        top: -30px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    #img {
+        height: 250px;
+    }
+}
